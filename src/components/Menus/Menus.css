@@ -1,0 +1,97 @@
+/* === Sidebar Container === */
+.menus-container {
+  position: fixed;             /* ✅ Keeps sidebar fixed while scrolling */
+  top: 0;
+  left: 0;
+  height: 100vh;               /* full viewport height */
+  width: 250px;                /* width of sidebar */
+  background-color: #000;      /* black sidebar */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  transition: width 0.3s ease;
+  overflow: hidden;            /* hide scrollbars in sidebar */
+}
+
+/* === Collapsed Sidebar (when toggle is false) === */
+.menus-container.collapsed {
+  width: 80px;
+}
+
+/* === Profile Picture === */
+.navbar-profile-pic {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar-profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menus-container.collapsed .navbar-profile-pic {
+  width: 50px;
+  height: 50px;
+}
+
+/* === Navigation Items === */
+.nav-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 30px;
+  gap: 15px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.05rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+/* === Hover Effects === */
+.nav-link:hover {
+  color: #ffb347; /* orange gradient hover tone */
+  transform: translateX(5px);
+}
+
+/* === Collapsed Mode Navigation Icons === */
+.menus-container.collapsed .nav-items {
+  align-items: center;
+  padding-left: 0;
+}
+
+.menus-container.collapsed .nav-link {
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+/* === Responsive for Smaller Screens === */
+@media (max-width: 992px) {
+  .menus-container {
+    width: 200px;
+  }
+  .menus-container.collapsed {
+    width: 60px;
+  }
+  .nav-link {
+    font-size: 0.95rem;
+  }
+}

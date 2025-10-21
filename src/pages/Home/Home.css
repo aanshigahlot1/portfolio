@@ -1,0 +1,88 @@
+.home-container{
+    
+    color:black;
+    margin-left: 150px;
+}
+.home-content h2{
+    padding: 30px;
+    padding-top: 100px;
+   
+  
+}
+.home-content h1{
+padding: auto;
+    color:chocolate;
+   
+    font-size: 50px;
+}
+.home-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+/* Base button style */
+.btn {
+  position: relative;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+}
+
+/* Hire Me Button */
+.hire-me-btn {
+  background: linear-gradient(135deg, #f29f67, #f25555);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(242, 159, 103, 0.4);
+}
+
+/* Download Resume Button */
+.download-resume-btn {
+  background: transparent;
+  color: #f29f67;
+  border: 2px solid #f29f67;
+}
+
+/* Hover Effects */
+.hire-me-btn:hover {
+  background: linear-gradient(135deg, #f25555, #f29f67);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(242, 159, 103, 0.6);
+}
+
+.download-resume-btn:hover {
+  background: #f29f67;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(242, 159, 103, 0.4);
+}
+
+/* Button click animation */
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* Optional glowing animation */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #f29f67, 0 0 10px #f29f67;
+  }
+  50% {
+    box-shadow: 0 0 20px #f29f67, 0 0 40px #f29f67;
+  }
+  100% {
+    box-shadow: 0 0 5px #f29f67, 0 0 10px #f29f67;
+  }
+}
+
+/* Subtle glowing effect for Hire Me button */
+.hire-me-btn:hover {
+  animation: glowing 1.5s infinite;
+}
